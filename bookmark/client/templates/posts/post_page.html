@@ -1,0 +1,15 @@
+<template name="postPage">
+  {{> postItem}}
+   <hr>
+  <ul class="comments">
+    {{#each comments}}
+      {{> commentItem}}
+    {{/each}}
+  </ul>
+
+  {{#if currentUser}}
+    {{> commentSubmit}}
+  {{else}}
+    <p class="login-alert alert-danger">请登陆后评论</p>
+  {{/if}}
+</template>
